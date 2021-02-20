@@ -1,0 +1,30 @@
+using System;
+
+namespace programacion0._1
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int num;
+			int descuento=20;
+			int resultado;
+
+            
+			Console.WriteLine("ingrese total de consumo:");
+			num = Convert.ToInt32(Console.ReadLine());
+
+			if (num >= 300)
+			{
+				descuento = num * 20 / 100;
+				resultado = 300 - descuento;
+				Console.WriteLine("20% de descuento en consumo mayoes a 300:" + resultado);
+
+			}
+			else
+			{
+				Console.WriteLine("El total es Q: " + num);
+			}
+		}
+	}
+}
