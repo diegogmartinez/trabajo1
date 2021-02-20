@@ -1,0 +1,24 @@
+using System;
+
+namespace programacion1._3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int numero;
+
+            Console.WriteLine("Ingrese cualquier numero para decirle si es primo o no lo es:");
+            numero =(Convert.ToInt32(Console.ReadLine()));
+
+            if (numero % i == 0)
+            {
+                Console.WriteLine("No es numero primo:" + numero);
+            }
+            else
+            {
+                Console.WriteLine("Es un numero primo:" + numero);
+            }    
+        }
+    }
+}
