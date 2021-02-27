@@ -1,0 +1,51 @@
+Autoevaluación  
+¿Qué son las estructuras selectivas?
+Son las que dirigen la ejecución del programa hacia un grupo de sentencias.
+¿Cuándo se ejecuta la sentencia de if?
+Cuando se cumple alguna de las sentencias.
+¿Qué colocamos entre paréntesis en if?
+La condición
+¿Qué es una expresión relacional?
+Son símbolos que se usan para comparar dos valores.
+¿Cuáles son los operadores de una expresión relacional o lógica?
+>,<,>=,<=,==,!=
+¿A qué valores posibles puede evaluar una expresión relacional o lógica?
+¿Qué es una expresión lógica?
+Son las que solo pueden tomar dos valores
+¿Cuáles son los operadores de las expresiones lógicas?
+&&, ||, !
+¿Qué operador necesita solo un operando?
+¿Cómo funciona un switch?
+ Es una sentencia que se utiliza para seleccionar una de entre múltiples alternativas.
+¿Qué es la variable de comparación y como se coloca?
+
+¿Cómo definimos los casos y como usamos break?
+Case 1: 
+detener la ejecución de un bucle y salirse de él.
+Autoevaluación  
+
+¿Qué es un ciclo?
+Es una secuencia de instrucciones que se ejecuta múltiples veces.
+¿Cuáles son las partes del ciclo for?
+El inicio, condición, limite, incremento o decremento.
+
+¿Cómo colocamos el valor inicial de conteo en un ciclo for?
+For (i=0)
+¿Cómo colocamos el valor final de conteo en un ciclo for?
+For (i++)
+¿Cómo se lleva a cabo el incremento en un ciclo for?
+
+¿Cómo funciona el ciclo do while?
+ La condición se evalúa al finalizar el ciclo, esto hace que las instrucciones se ejecuten cuando menos una vez.
+¿Por qué el ciclo while se lleva a cabo al menos una vez?
+Por el contador.
+¿Se necesita punto y coma al finalizar el ciclo do while?
+No, porque se estaría indicando que la estructura de control termina en ese punto asi que no se repiten las instrucciones.
+¿Cómo funciona el ciclo while?
+Primero observa la condición y luego ejecuta.
+¿Cuántas veces se puede repetir el ciclo while?
+Las que el programador quiera.
+¿Qué tipo de condición podemos colocar en el ciclo while?
+La condición tenga el valor verdadero. 
+¿Se coloca un bloque de código en el ciclo while?
+Si se puede.
