@@ -1,0 +1,34 @@
+using System;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int numero, n1;
+            bool pri;
+
+            Console.WriteLine("ingrese valor mil");
+            numero = int.Parse(Console.ReadLine());
+
+            for (int x = 2; x < numero; x++)
+            {
+                n1 = 2;
+                pri = true;
+
+                while (pri && n1 < x)
+                {
+                    if (x % n1 == 0)
+                        pri = false;
+                    else
+                        n1 = n1 + 1;
+                }
+                if (pri)
+                    Console.WriteLine("este numero es primo:" + x);
+
+            }
+            Console.ReadLine();
+        }
+    }
+}
