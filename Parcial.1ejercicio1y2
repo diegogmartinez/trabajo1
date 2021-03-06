@@ -1,0 +1,331 @@
+adivinarnumero
+usando el sistema;
+usando System.Collections.Generic;
+utilizando System.Linq;
+usando System.Text;
+usando System.Threading.Tasks;
+
+espacio de nombres parcial.adivinar.numero
+{
+    programa de clase
+    {
+        static void Main (cadena [] argumentos)
+        {
+            doble numero;
+            resultado de cadena, otravez;
+
+            Console.Write ("Adivinare el numero que estas pensando");
+            hacer
+            {
+                Console.Write ("\ n \ n Paso 1.Piensa en un nuemero");
+                Console.ReadLine ();
+
+                Console.Write ("\ n Paso 2. Multiplica el número por dos");
+                Console.ReadLine ();
+
+                Console.Write ("\ n Paso 3. Sumale ocho");
+                Console.ReadLine ();
+
+                Console.Write ("\ n Paso 4. Multiplica el resultado por cinco");
+                Console.ReadLine ();
+
+                Console.Write ("\ n Paso 5. Inserte el resultado final:");
+                resultado = Console.ReadLine (); // se almacena el resultado
+                resultado = resultado.Remove (resultado.Length - 1); // remove tiene como funcion restale uno de longitud al resultado
+                numero = doble.Parse (resultado);
+                numero = numero - 4; // al resultado le restamos cuanto
+
+                Console.Write ("\ n El numero de que pensaste es:" + numero); // aqui se imprime el resultado final
+
+                Console.Write ("\ n \ n Apetece volverlo a intertar s / n"); // esta parte inicia otra vez el ciclo
+                otravez = Console.ReadLine ();
+
+                while (otravez! = "s" && otravez! = "n")
+                {
+                    Console.Write ("Apetece volver a intertar s / n");
+                    otravez = Console.ReadLine ();
+                }
+            } while (otravez == "s");
+            Console.ReadKey ();
+
+        }
+    }
+}
+
+xamarin
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="adivinar1._7.MainPage"
+             Visual="Material">
+
+    <StackLayout>
+        <Frame BackgroundColor="White" Padding="20" CornerRadius="0">
+            <Label Text="Adivinare el numero que estas pensando" HorizontalTextAlignment="Center" TextColor="Black" FontSize="35"/>
+        </Frame>
+        <Label Text="1.Piense en un numero"
+               TextColor="Black"
+               FontSize="Title"  
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" 
+               Padding="30,10,30,10"/>
+        <Label Text="2. multiplicalo por 2"
+               TextColor="Black"
+               FontSize="Title"  
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" 
+               Padding="30,10,30,10"/>
+        <Label Text="3. sumale 8 " 
+               TextColor="Black"
+               FontSize="Title"  
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" 
+               Padding="30,10,30,10"/>
+        <Label Text="4. multiplicalo por 5"
+               TextColor="Black"
+               FontSize="Title"  
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" 
+               Padding="30,10,30,10"/>
+        <Entry Placeholder="Proporcione el resultado final"
+               x:Name="resultadofinal"
+               Keyboard="Numeric"/>
+        <Entry Placeholder="El numero que piensas es:"
+               x:Name="numero"
+               IsEnabled="False"/>
+
+
+        <Button Text="Siguiente"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Background="white"
+                BorderColor="Black"
+                BorderWidth="3"
+                CornerRadius="20"
+                WidthRequest="100"
+                HeightRequest="60"
+                Clicked="Button_Clicked"/>
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Xamarin.Forms;
+
+namespace adivinar1._7
+{
+    public partial class MainPage : ContentPage
+    {
+
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+
+        {
+            if (!string.IsNullOrEmpty(resultadofinal.Text))
+
+            {
+                var resultado = double.Parse(resultadofinal.Text);
+
+                var num = (resultado / 10) - 4;
+                numero.Text = num.ToString();
+
+            }
+            else
+            {
+                DisplayAlert("Apetece volver a intertarlo");
+            }
+
+               
+        }
+
+        private void DisplayAlert(string v)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
+                
+               
+        
+
+
+    </StackLayout>
+
+</ContentPage>
+
+
+c#
+cumpeños
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace adivinarcumpleaños
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double numero;
+            string resultado,otravez;
+
+            Console.Write(" Adivinare su fecha de nacimiento");
+            do
+            {
+                Console.Write("\n\n Paso 1. Anote el dia que nacio");
+                Console.ReadLine();
+
+                Console.Write("\n Paso 2. Multiplicalo por veinte");
+                Console.ReadLine();
+
+                Console.Write("\n Paso 3. Sumale setenta y tres");
+                Console.ReadLine();
+
+                Console.Write("\n Paso 4. Multiplica el resultado por cinco");
+                Console.ReadLine();
+
+                Console.Write("\n Paso 5, sumale tu mes");
+                Console.ReadLine();
+
+                Console.Write("\n Paso 5. Inserte el resultado final:");
+                resultado = Console.ReadLine(); //se almacena el resultado
+                
+                numero = double.Parse(resultado);
+                numero = numero - 365;//al resultado le restamos cuanto
+
+                Console.Write("\n El fecha de cumpleaños es:" + numero);// aqui se imprime el resultado final
+
+                Console.Write("\n\n  Apetece volverlo a intertar s/n");//esta parte inicia otra vez el ciclo
+                otravez = Console.ReadLine();
+
+                while (otravez != "s" && otravez != "n")
+                {
+                    Console.Write(" Apetece volver a intertar s/n");
+                    otravez = Console.ReadLine();
+                }
+            } while (otravez == "s");
+            Console.ReadKey();
+
+        }
+    }
+}
+
+xamarin
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Xamarin.Forms;
+
+namespace adivinarcumpleaños
+{
+    public partial class MainPage : ContentPage
+    {
+
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+
+        {
+            if (!string.IsNullOrEmpty(resultadofinal.Text))
+
+            {
+                var resultado = double.Parse(resultadofinal.Text);
+
+                var num = resultado - 365;
+                numero.Text = num.ToString();
+
+            }
+            else
+            {
+                DisplayAlert("Apetece volver a intertarlo");
+            }
+
+               
+        }
+
+        private void DisplayAlert(string v)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="adivinarcumpleaños.MainPage"
+             Visual="Material">
+
+    <StackLayout>
+        <Frame BackgroundColor="White" Padding="20" CornerRadius="0">
+            <Label Text="Adivinare tu fecha de cumpleños" HorizontalTextAlignment="Center" TextColor="Black" FontSize="35"/>
+        </Frame>
+        <Label Text="1.Apuntesu fecha"
+               TextColor="Black"
+               FontSize="Title"  
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" 
+               Padding="30,10,30,10"/>
+        <Label Text="2. Ahora multipliquelo por veinte"
+               TextColor="Black"
+               FontSize="Title"  
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" 
+               Padding="30,10,30,10"/>
+        <Label Text="3. sumele por setenta y tres " 
+               TextColor="Black"
+               FontSize="Title"  
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" 
+               Padding="30,10,30,10"/>
+        <Label Text="4. multipliquelo por cinco"
+               TextColor="Black"
+               FontSize="Title"  
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" 
+               Padding="30,10,30,10"/>
+        <Label Text="4. sumele el su mes de nacimiento"
+               TextColor="Black"
+               FontSize="Title"  
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" 
+               Padding="30,10,30,10"/>
+        <Entry Placeholder="Proporcione el resultado final"
+               x:Name="resultadofinal"
+               Keyboard="Numeric"/>
+        <Entry Placeholder="Su fecha de cumpleaños es:"
+               x:Name="numero"
+               IsEnabled="False"/>
+
+
+        <Button Text="Siguiente"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Background="white"
+                BorderColor="Black"
+                BorderWidth="3"
+                CornerRadius="20"
+                WidthRequest="100"
+                HeightRequest="60"
+                Clicked="Button_Clicked"/>
+                
+               
+        
+
+
+    </StackLayout>
+
+</ContentPage>
