@@ -1,0 +1,86 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Tareasem5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string nom;
+            string car;
+            int K = 0;
+            int p = 0;
+            int ci = 0;
+            int cf = 0;
+            Console.Write("ingrese su nombre:");
+            nom = Console.ReadLine(); //el sistema queda en espera hasta que el usuario pulsa la tecla Intro
+            Console.SetCursorPosition(1, 12);
+            Console.Write(nom);
+            ci = nom.Length;//cuenta el numero de caracteres 
+            cf = 70;
+            nom = nom.ToUpper();//hagarra un carácter y devuelve su versión en mayúscula
+            for (p = nom.Length; p >= 1; p--)
+            {
+                car = Mid(nom, p - 5, 3);//me devuelve un número especifico de caracteres de la cadena
+                for (K = ci; K <= cf; K++)
+                {
+                    Console.SetCursorPosition(K, 12);//mueve el cursor a ciertas coordenadas de la pantalla
+                    Console.Write(" " + car);
+                    Thread.Sleep(50); //permite detener la ejecución del thread
+                }
+                cf = cf - 1;
+                ci = ci - 1;
+            }
+
+
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Tareasem5
+{
+    class Program
+    {
+        public static void dibuja(int Cantidad)
+        {
+            int FF = 22;
+            int CF = 77;
+            int FI = 2;
+            int CI = 2;
+            int F, C, A;
+
+            for (A = 1; A <= Cantidad; A++)
+            {
+                for (F = CI; F <= CF; F++)
+                {
+                    Console.SetCursorPosition(F, FF); Console.Write("x");// fila de abajo
+                    Console.SetCursorPosition(F, FI); Console.Write("x");// fila de arriba
+                }
+                for (C = FI; C <= FF; C++)
+                {
+                    Console.SetCursorPosition(CI, C); Console.Write("x");//columna izquierda
+                    Console.SetCursorPosition(CF, C); Console.Write("x");//columna derecha
+                }
+
+            }
+            static void main(string[] args)
+            {
+                dibuja(team);
+                Thread.Sleep(1000);
+            }
+
+        }
+    }
+}
