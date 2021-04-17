@@ -137,13 +137,13 @@ namespace listadopromedio
             switch (X)
             {
                 case 1:
-                    textBoxPromedio.Text = "" + Promedio1.ToString();
+                    textBoxpromedio.Text = "" + Promedio1.ToString();
                     break;
                 case 2:
-                    textBoxPromedio.Text = "" + Promedio2.ToString();
+                    textBoxpromedio.Text = "" + Promedio2.ToString();
                     break;
                 case 3:
-                    textBoxPromedio.Text = "" + Promedio3.ToString();
+                    textBoxpromedio.Text = "" + Promedio3.ToString();
                     break;
             }
         }
