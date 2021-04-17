@@ -195,6 +195,7 @@ namespace listadopromedio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Blue;
             this.ClientSize = new System.Drawing.Size(1092, 600);
             this.Controls.Add(this.textBoxnotaminima);
             this.Controls.Add(this.textBoxnotamaxima);
