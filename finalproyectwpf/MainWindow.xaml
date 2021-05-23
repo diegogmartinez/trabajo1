@@ -1,0 +1,41 @@
+﻿<Window x:Class="finalproyectwpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:finalproyectwpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="1300" Background="Orange">
+    <Grid>
+        <Label Content="CONCURSO ESTUDIANTIL DE UNIVERSIDADES"  FontSize="41" HorizontalAlignment="Left" Height="82" Margin="10,0,0,0" VerticalAlignment="Top" Width="1264" Background="Tan" FontWeight="Medium" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="TexBoxNombre" HorizontalAlignment="Left" Height="40" Margin="154,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="388" FontFamily="Sitka Small" FontSize="18"/>
+        <TextBox x:Name="TexBoxedad" HorizontalAlignment="Left" Height="40" Margin="154,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="388" FontFamily="Sitka Small" FontSize="18"/>
+        <TextBox x:Name="TexBoxtelefono" HorizontalAlignment="Left" Height="40" Margin="154,227,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="388" FontFamily="Sitka Small" FontSize="18"/>
+        <Label Content="EDAD" HorizontalAlignment="Left" Height="40" Margin="19,160,0,0" VerticalAlignment="Top" Width="126" FontFamily="Segoe UI Black" FontSize="18" BorderBrush="Black" BorderThickness="1"/>
+        <Label Content="TELEFONO" HorizontalAlignment="Left" Height="40" Margin="19,227,0,0" VerticalAlignment="Top" Width="126" FontFamily="Segoe UI Black" FontSize="18" BorderBrush="Black" BorderThickness="1"/>
+        <Label Content="CARRERA" HorizontalAlignment="Left" Height="40" Margin="19,294,0,0" VerticalAlignment="Top" Width="126" FontFamily="Segoe UI Black" FontSize="18" BorderBrush="Black" BorderThickness="1"/>
+        <Label Content="UNIVERSIDAD" HorizontalAlignment="Left" Height="40" Margin="19,362,0,0" VerticalAlignment="Top" Width="136" FontFamily="Segoe UI Black" FontSize="16" BorderBrush="Black" BorderThickness="1"/>
+        <DatePicker x:Name="fechaPicker" HorizontalAlignment="Left" Height="43" Margin="19,427,0,0" VerticalAlignment="Top" Width="206" FontSize="14" FontWeight="ExtraBold"/>
+        <Button x:Name="guardar" Content="Guardar" HorizontalAlignment="Left" Margin="289,427,0,0" VerticalAlignment="Top" Width="220" Height="93" FontSize="43" Background="#FF5DC71C" FontFamily="Segoe UI Black" Click="guardar_Click"/>
+        <ComboBox x:Name="ComboboxConsCarrera" ItemsSource="{Binding carrerasñ}" Grid.Column="1" HorizontalAlignment="Left" Margin="718,142,0,0" VerticalAlignment="Top" Width="220" Height="38"/>
+        <Label Content="NOMBRE" HorizontalAlignment="Left" Height="40" Margin="19,92,0,0" VerticalAlignment="Top" Width="126" FontFamily="Segoe UI Black" FontSize="18" BorderBrush="Black" BorderThickness="1"/>
+        <TextBox x:Name="TexBoxNombreCons" Grid.Column="1" HorizontalAlignment="Left" Height="38" Margin="719,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="522" FontFamily="Sitka Small" FontSize="18"/>
+        <Button x:Name="ingresefecha" Content="SELECCIONAR" HorizontalAlignment="Left" Margin="19,477,0,0" VerticalAlignment="Top" Width="206" Height="42" FontSize="19" FontWeight="ExtraBold" Click="ingresefecha_Click"/>
+        <Button x:Name="fecha1" Content="Seleccione Fecha 1" HorizontalAlignment="Left" Margin="572,284,0,0" VerticalAlignment="Top" Width="204" Height="50" FontWeight="ExtraBold" Click="fecha1_Click"/>
+        <Button x:Name="fecha2" Content="Seleccione Fecha 2" HorizontalAlignment="Left" Margin="783,284,0,0" VerticalAlignment="Top" Width="205" Height="50" FontWeight="ExtraBold" Click="fecha2_Click"/>
+        <DatePicker x:Name="picker1" HorizontalAlignment="Left" Margin="575,234,0,0" VerticalAlignment="Top" Height="42" Width="201"/>
+        <DatePicker x:Name="picker2" HorizontalAlignment="Left" Margin="783,234,0,0" VerticalAlignment="Top" Width="205" Height="42" RenderTransformOrigin="1.065,1.541"/>
+        <Button x:Name="nombrebus" Content="NOMBRE" Grid.Column="1" HorizontalAlignment="Left" Margin="569,92,0,0" VerticalAlignment="Top" Width="144" Height="38" FontWeight="ExtraBold" FontSize="14" Click="nombrebus_Click"/>
+        <Button x:Name="carrerabus" Content="CARRERA" Grid.Column="1" HorizontalAlignment="Left" Margin="569,142,0,0" VerticalAlignment="Top" Width="144" Height="38" FontSize="14" FontWeight="ExtraBold" Click="carrerabus_Click"/>
+        <Button x:Name="universidadbus" Content="UNIVERSIDAD" Grid.Column="1" HorizontalAlignment="Left" Margin="569,187,0,0" VerticalAlignment="Top" Width="144" Height="37" FontSize="14" FontWeight="ExtraBold" Click="universidadbus_Click"/>
+        <ComboBox x:Name="ComboboxCarrera" ItemsSource="{Binding carrerasñ}" HorizontalAlignment="Left" Margin="154,294,0,0" VerticalAlignment="Top" Width="388" Height="40"/>
+        <ComboBox x:Name="ComboboxConsUni" ItemsSource="{Binding universidad}" Grid.Column="1" HorizontalAlignment="Left" Margin="718,187,0,0" VerticalAlignment="Top" Width="220" Height="37"/>
+        <ComboBox x:Name="ComboboxUniversidad" ItemsSource="{Binding universidad}" HorizontalAlignment="Left" Margin="165,362,0,0" VerticalAlignment="Top" Width="377" Height="40"/>
+        <ListBox x:Name="listado" Grid.Column="1" HorizontalAlignment="Left" Height="236" Margin="568.8,424,0,0" VerticalAlignment="Top" Width="686"/>
+        <Button Content="MODIFICAR" HorizontalAlignment="Left" Height="50" Margin="305,609,0,0" VerticalAlignment="Top" Width="239" FontFamily="Segoe UI Black" FontSize="18" Click="Button_Click"/>
+        <TextBox x:Name="texbosModificar" HorizontalAlignment="Left" Height="49" Margin="127,552,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="419"/>
+        <Label Content="NOMBRE" Background="Gray" HorizontalAlignment="Left" Height="49" Margin="8,552,0,0" VerticalAlignment="Top" Width="115" FontFamily="Segoe UI Black" FontSize="14" HorizontalContentAlignment="Center"/>
+        <ComboBox x:Name="ComboboxUniversidad_Copy" ItemsSource="{Binding universidad}" HorizontalAlignment="Left" Margin="14,609,0,0" VerticalAlignment="Top" Width="286" Height="50"/>
+        <Button x:Name="BsXFecha" Content="Buscar por Fecha" HorizontalAlignment="Left" Height="42" Margin="1022,268,0,0" VerticalAlignment="Top" Width="206" FontFamily="Segoe UI Black" FontSize="15" Click="BsXFecha_Click"/>
+    </Grid>
+</Window>
